@@ -1,5 +1,5 @@
 {
-  "name": "nativescript-azure-mobile-apps",
+  "name": "nativescript-azure-mobile-apps-with-updated-auth",
   "version": "2.0.3",
   "description": "A NativeScript plugin for working with Azure Mobile Apps",
   "main": "azure-mobile-apps",
@@ -16,10 +16,9 @@
       "category": "Utilities"
     }
   },
-
   "repository": {
     "type": "git",
-    "url": "https://github.com/PeterStaev/nativescript-azure-mobile-apps"
+    "url": "https://github.com/romandragan/nativescript-azure-mobile-apps"
   },
   "scripts": {
     "tslint": "tslint --project tsconfig.json",
@@ -38,7 +37,8 @@
   "author": "Peter Staev <peter@tangrasoft.com>",
   "contributors": [
     "George Edwards (https://github.com/georgeedwards)",
-    "Eddy Verbruggen (https://github.com/eddyverbruggen)"
+    "Eddy Verbruggen (https://github.com/eddyverbruggen)",
+    "Roman Drahan (https://github.com/romandragan)"
   ],
   "license": "Apache-2.0",
   "peerDependencies": {
