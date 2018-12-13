@@ -56,7 +56,17 @@ export class MobileServiceClient extends common.MobileServiceClient {
     public getTable(tableName: string): MobileServiceTable {
         return new MobileServiceTable(this._msClient.getTable(tableName));
     }
-    
+
+    public handleActivityResult(intent: any): Promise<MobileServiceUser> {
+        var result = this._msClient.onActivityResult(intent);
+
+        if (result.isLoggedIn()) {
+          return Promise.resolve(new MobileServiceUser(this._msClient.getCurrentUser(), this._url));
+        }
+
+        return Promise.reject(result.getErrorMessage());
+    };
+
     public login(provider: AuthenticationProvider, urlScheme?: string): Promise<MobileServiceUser> {
         return new Promise((resolve, reject) => {
             try {
