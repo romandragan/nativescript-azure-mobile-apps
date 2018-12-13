@@ -15,7 +15,6 @@ limitations under the License.
 ***************************************************************************** */
 import * as common from "./client-common";
 import * as application from "application";
-import * as utils from "../utils";
 import { MobileServiceTable } from "../table";
 import { MobileServiceUser, AuthenticationProvider } from "../user";
 import { MobileServicePush } from "../push";
