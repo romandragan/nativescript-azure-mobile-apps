@@ -60,11 +60,8 @@ export class MobileServiceClient extends common.MobileServiceClient {
     public login(provider: AuthenticationProvider, urlScheme?: string): Promise<MobileServiceUser> {
         return new Promise((resolve, reject) => {
             try {
-                let futureResult = this._msClient.login(nativeAuthenticationProviders[provider]);
-                utils.futureToPromise(futureResult).then((result) => {
-                    this.user = new MobileServiceUser(result, this._url);
-                    resolve(this.user); 
-                }, reject);
+                this._msClient.login(nativeAuthenticationProviders[provider], urlScheme, provider);
+                resolve();
             }
             catch (e) {
                 reject(e);
