@@ -57,7 +57,7 @@ export class MobileServiceClient extends common.MobileServiceClient {
     }
 
     public handleActivityResult(intent: any): Promise<MobileServiceUser> {
-        var result = this._msClient.onActivityResult(intent);
+        const result = this._msClient.onActivityResult(intent);
 
         if (result.isLoggedIn()) {
           return Promise.resolve(new MobileServiceUser(this._msClient.getCurrentUser(), this._url));
